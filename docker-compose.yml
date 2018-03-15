@@ -4,12 +4,12 @@ services:
     restart: always
     image: rocker/verse
     volumes:
-      - /home/chrobinson.com/baggcha/playground:/home/playground
+      - /home/playground:/home/playground
     ports:
       - 8787:8787
     environment:
-      USER: 'datascience'
-      PASSWORD: 'normal'
+      USER: 'user'
+      PASSWORD: 'pass'
     links:
       - redis
   redis:
