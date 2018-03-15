@@ -1,0 +1,17 @@
+version: '2'
+services:
+  rstudioserver:
+    restart: always
+    image: rocker/verse
+    volumes:
+      - /home/chrobinson.com/baggcha/playground:/home/playground
+    ports:
+      - 8787:8787
+    environment:
+      USER: 'datascience'
+      PASSWORD: 'normal'
+    links:
+      - redis
+  redis:
+    restart: always
+    image: redis 
