@@ -63,10 +63,6 @@ Potential Solutions
 
 - Sometimes, this isn't necessary. 
 
-
-Potential Solutions
-========================================================
-
 Many of my shiny applications follow a fairly simple design where users select something and the model/data/etc is filtered and all data is refit. This is such a simple design that a SQL database is overkill. 
 
 Redis works really well for these types of tasks. 
@@ -95,8 +91,6 @@ Sys.time() - start
 Time difference of 1.22172 secs
 ```
 
-How you Might Do it Today
-========================================================
 Or maybe you like Data.Table
 
 
@@ -123,9 +117,7 @@ for (k in unique(dt[[key(dt)]])){
 }
 ```
 
-How you could do it with Redis
-========================================================
-
+Redis Get
 ```r
 start <- Sys.time()
 trash <- redisGet("84029E")
